@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import slides from "../../data"; //faltando as urls dos videos
+import { slides } from "../../data";
 
 import { Header } from "../../components/Header";
 import { Carousel } from "../../components/Carousel";
+import { Name } from "../../components/Name";
 
 import { Container, Overlay } from "./style";
 
@@ -10,13 +11,6 @@ export const Home = () => {
   const [active, setActive] = useState<number>(0);
   const [position, setPostion] = useState<number>(0);
   const contentRef = useRef<HTMLInputElement | null>(null);
-
-  /* galeria funcionando, faltando apenas importar os videos
-   {slides.map(({ id, bg }) => {
-              return (
-                <video key={id} src={bg} autoPlay loop muted className="item" />
-     );
-   })}*/
 
   useEffect(() => {
     if (!contentRef.current) return;
@@ -46,11 +40,11 @@ export const Home = () => {
             className="content"
             style={{ transform: `translateX(${position}px)` }}
           >
-            <iframe
-              src="https://www.youtube.com/embed/Ec-O9cHDGqI?autoplay=1&mute=1"
-              frameBorder="0"
-              className="item"
-            />
+            {slides.map(({ id, bg }) => {
+              return (
+                <video key={id} src={bg} autoPlay loop muted className="item" />
+              );
+            })}
           </div>
           <Overlay />
           <Carousel
@@ -58,6 +52,14 @@ export const Home = () => {
             slidePrev={slidePrev}
             active={active}
           />
+          <div
+            className="content"
+            style={{ transform: `translateX(${position}px)` }}
+          >
+            {slides.map(({ id, name, desc }) => {
+              return <Name key={id} name={name} desc={desc} />;
+            })}
+          </div>
         </section>
       </Container>
     </>
