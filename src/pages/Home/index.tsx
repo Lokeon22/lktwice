@@ -56,8 +56,8 @@ export const Home = () => {
             className="content"
             style={{ transform: `translateX(${position}px)` }}
           >
-            {slides.map(({ id, name, desc }) => {
-              return <Name key={id} name={name} desc={desc} />;
+            {slides.map(({ id, name, desc, img }) => {
+              return <Name key={id} name={name} desc={desc} img={img} />;
             })}
           </div>
         </section>

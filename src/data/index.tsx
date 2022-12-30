@@ -1,9 +1,10 @@
 import intoyu from "../assets/videos/intoyu.mp4";
 import morningyu from "../assets/videos/morningyu.mp4";
+import witcherwolf from "../assets/icons/witcherwolf.jpg";
 // import videos because stream on mobile not autoplay
 
 export const slides = [
-  { id: 1, bg: intoyu, name: "LKNZ", desc: "Get LK" },
+  { id: 1, bg: intoyu, name: "LKNZ", desc: "GET LK", img: witcherwolf },
   {
     id: 2,
     bg: morningyu,
