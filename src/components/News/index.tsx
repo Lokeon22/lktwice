@@ -1,19 +1,25 @@
 import { Container, NewsContent } from "./style";
 
-export const News = () => {
+interface Noticias {
+  news?: string[];
+}
+
+export const News = ({ news }: Noticias) => {
   return (
     <Container>
       <h2>WHAT'S NEW</h2>
-      <NewsContent>
-        <div>
-          <h1>NEWS</h1>
-          <span>2022.12.22</span>
-        </div>
-        <a href="#">
-          ※Please note that the maintenance schedule is subject to change. We
-          apologize for any inconvenience.
-        </a>
-      </NewsContent>
+      {news &&
+        news.map((noticia, index) => {
+          return (
+            <NewsContent key={index}>
+              <div>
+                <h1>NEWS</h1>
+                <span>2022.12.22</span>
+              </div>
+              <a href="#">{noticia}</a>
+            </NewsContent>
+          );
+        })}
     </Container>
   );
 };

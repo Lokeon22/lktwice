@@ -15,11 +15,11 @@ export const Carousel = ({ slideNext, slidePrev, active }: BodyComponent) => {
       <div className="content">
         <div onClick={slidePrev}>
           <span>0{active + 1}/06</span>
-          {<FiChevronLeft size={24} />}
+          {<FiChevronLeft size={26} />}
         </div>
         <div onClick={slideNext}>
           <span>next</span>
-          {<FiChevronRight size={24} />}
+          {<FiChevronRight size={26} />}
         </div>
       </div>
     </Container>

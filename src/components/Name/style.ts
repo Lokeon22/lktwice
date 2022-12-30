@@ -57,6 +57,10 @@ export const Container = styled.section`
     }
 
     @media screen and (max-width: 768px) {
+      img {
+        width: 100%;
+      }
+
       p {
         max-width: 300px;
       }

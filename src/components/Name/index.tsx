@@ -6,9 +6,10 @@ interface DetailsBody {
   name: string;
   desc: string;
   img?: string;
+  news?: string[];
 }
 
-export const Name = ({ name, desc, img }: DetailsBody) => {
+export const Name = ({ name, desc, img, news }: DetailsBody) => {
   return (
     <Container>
       <div>
@@ -25,7 +26,7 @@ export const Name = ({ name, desc, img }: DetailsBody) => {
           for three consecutive years since their debut year.
         </p>
       </div>
-      <News />
+      <News news={news} />
     </Container>
   );
 };

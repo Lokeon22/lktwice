@@ -21,13 +21,19 @@ export const Container = styled.div`
     z-index: 1;
 
     span {
-      font-size: 20px;
+      font-size: 18px;
       opacity: 0.9;
       cursor: pointer;
     }
 
     svg {
       cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      padding: 0px 10px;
     }
   }
 `;

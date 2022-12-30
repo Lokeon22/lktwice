@@ -4,7 +4,20 @@ import witcherwolf from "../assets/icons/witcherwolf.jpg";
 // import videos because stream on mobile not autoplay
 
 export const slides = [
-  { id: 1, bg: intoyu, name: "LKNZ", desc: "GET LK", img: witcherwolf },
+  {
+    id: 1,
+    bg: intoyu,
+    name: "LKNZ",
+    desc: "GET LK",
+    img: witcherwolf,
+    news: {
+      newsrelate: [
+        "※Please note that the maintenance schedule is subject to change. We apologize for any incovenience this may cause, and thank you for your understanding.",
+        "Important Notice: Operating Company Name Change",
+        "Notice regarding cancellation & ticket refunds",
+      ],
+    },
+  },
   {
     id: 2,
     bg: morningyu,

@@ -16,7 +16,6 @@ export const Container = styled.section`
   .item {
     width: 100%;
     height: 100vh;
-
     object-fit: cover;
     flex-shrink: 0;
   }
