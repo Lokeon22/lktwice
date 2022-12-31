@@ -1,6 +1,7 @@
+import { Fade } from "react-awesome-reveal";
 import { Container } from "./style";
 import { News } from "../News";
-import { Fade } from "react-awesome-reveal";
+import { Button } from "../Button";
 
 interface DetailsBody {
   name: string;
@@ -27,6 +28,7 @@ export const Name = ({ name, desc, img, news }: DetailsBody) => {
         </p>
       </div>
       <News news={news} />
+      <Button title="VIEW MORE" />
     </Container>
   );
 };

@@ -4,6 +4,7 @@ import { slides } from "../../data";
 import { Header } from "../../components/Header";
 import { Carousel } from "../../components/Carousel";
 import { Name } from "../../components/Name";
+import { Aboutft } from "../../components/Aboutft";
 
 import { Container, Overlay } from "./style";
 
@@ -69,6 +70,7 @@ export const Home = () => {
             })}
           </div>
         </section>
+        <Aboutft />
       </Container>
     </>
   );

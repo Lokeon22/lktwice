@@ -11,4 +11,9 @@ export default createGlobalStyle`
     background-color: black;
     color: white;
   }
+
+  a{
+    text-decoration: none;
+  }
+
 `;
