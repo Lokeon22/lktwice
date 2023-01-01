@@ -6,12 +6,18 @@ interface BodyComponent {
   slideNext: React.MouseEventHandler<HTMLDivElement>;
   slidePrev: React.MouseEventHandler<HTMLDivElement>;
   active: number;
+  isVisible: boolean;
 }
 
-export const Carousel = ({ slideNext, slidePrev, active }: BodyComponent) => {
+export const Carousel = ({
+  slideNext,
+  slidePrev,
+  active,
+  isVisible,
+}: BodyComponent) => {
   //active is the index from slide
   return (
-    <Container>
+    <Container style={{ zIndex: isVisible ? "0" : "1" }}>
       <div className="content">
         <div onClick={slidePrev}>
           <span>0{active + 1}/06</span>

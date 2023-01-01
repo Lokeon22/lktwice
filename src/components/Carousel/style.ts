@@ -5,7 +5,6 @@ export const Container = styled.div`
   left: 0;
   top: 50%;
   position: absolute;
-  z-index: 1;
 
   .content {
     display: flex;
@@ -31,9 +30,13 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     .content {
       padding: 0px 10px;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 90%;
   }
 `;

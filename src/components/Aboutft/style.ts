@@ -55,4 +55,12 @@ export const Container = styled.div`
       position: initial;
     }
   }
+
+  @media screen and (max-width: 769px) {
+    margin-top: 10px;
+
+    div {
+      padding: 0 20px;
+    }
+  }
 `;

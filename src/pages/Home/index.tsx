@@ -5,12 +5,14 @@ import { Header } from "../../components/Header";
 import { Carousel } from "../../components/Carousel";
 import { Name } from "../../components/Name";
 import { Aboutft } from "../../components/Aboutft";
+import { Footer } from "../../components/Footer";
 
 import { Container, Overlay } from "./style";
 
 export const Home = () => {
   const [active, setActive] = useState<number>(0);
   const [position, setPostion] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const contentRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export const Home = () => {
   return (
     <>
       <Container>
-        <Header />
+        <Header isVisible={isVisible} setIsVisible={setIsVisible} />
         <section className="container">
           <div
             ref={contentRef}
@@ -52,6 +54,7 @@ export const Home = () => {
             slideNext={slideNext}
             slidePrev={slidePrev}
             active={active}
+            isVisible={isVisible}
           />
           <div
             className="content"
@@ -71,6 +74,7 @@ export const Home = () => {
           </div>
         </section>
         <Aboutft />
+        <Footer />
       </Container>
     </>
   );

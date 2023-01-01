@@ -9,7 +9,12 @@ import facebook from "../../assets/icons/facebook.svg";
 import instagram from "../../assets/icons/instagram.svg";
 import elips from "../../assets/icons/ellipsis.svg";
 
-export const Header = () => {
+interface isVisibleProps {
+  isVisible: boolean;
+  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Header = ({ isVisible, setIsVisible }: isVisibleProps) => {
   const [active, setActive] = useState(false);
 
   return (
@@ -25,8 +30,8 @@ export const Header = () => {
         <a href="#">Special</a>
         <a href="#">FanClub</a>
         <div
-          onMouseEnter={() => setActive(!active)}
-          onMouseLeave={() => setActive(!active)}
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
         >
           <img
             src={elips}
@@ -61,7 +66,7 @@ export const Header = () => {
           </ul>
         </div>
       </nav>
-      <MenuMobile />
+      <MenuMobile isVisible={isVisible} setIsVisible={setIsVisible} />
     </Container>
   );
 };

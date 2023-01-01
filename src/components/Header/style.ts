@@ -36,12 +36,12 @@ export const Container = styled.div`
         list-style: none;
         gap: 10px;
         margin-top: 45px;
-      }
 
-      img {
-        width: 16px;
-        :hover {
-          animation: rotation 0.7s linear;
+        img {
+          width: 16px;
+          :hover {
+            animation: rotation 0.7s linear;
+          }
         }
       }
 
