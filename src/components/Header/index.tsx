@@ -1,37 +1,67 @@
+import { useState } from "react";
+import { Container } from "./style";
+
+import { MenuMobile } from "../MenuMobile";
+
 import logo from "../../assets/icons/witcherlogo.png";
 import youtube from "../../assets/icons/youtube.svg";
 import facebook from "../../assets/icons/facebook.svg";
 import instagram from "../../assets/icons/instagram.svg";
-
-import menu from "../../assets/icons/icon.svg";
-
-import { Container } from "./style";
+import elips from "../../assets/icons/ellipsis.svg";
 
 export const Header = () => {
+  const [active, setActive] = useState(false);
+
   return (
     <Container>
-      <section className="content">
-        <div>
+      <nav>
+        <a href="#" style={{ color: "pink" }}>
+          Home
+        </a>
+        <a href="#">Profile</a>
+        <a href="#">News</a>
+        <img src={logo} />
+        <a href="#">Discography</a>
+        <a href="#">Special</a>
+        <a href="#">FanClub</a>
+        <div
+          onMouseEnter={() => setActive(!active)}
+          onMouseLeave={() => setActive(!active)}
+        >
           <img
-            src={logo}
-            style={{ width: "120px", height: "60px", zIndex: 1 }}
+            src={elips}
+            style={{ width: "30px", cursor: "pointer", filter: "invert(90%)" }}
           />
+          <ul style={{ display: active ? "flex" : "none" }}>
+            <li>
+              <a href="#">
+                <img src={instagram} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={youtube} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={facebook} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={youtube} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={instagram} />
+              </a>
+            </li>
+          </ul>
         </div>
-        <div className="secondcontent">
-          <nav>
-            <a href="#" target="_blank">
-              <img src={youtube} />
-            </a>
-            <a href="#" target="_blank">
-              <img src={facebook} />
-            </a>
-            <a href="#" target="_blank">
-              <img src={instagram} />
-            </a>
-          </nav>
-          <img src={menu} />
-        </div>
-      </section>
+      </nav>
+      <MenuMobile />
     </Container>
   );
 };
