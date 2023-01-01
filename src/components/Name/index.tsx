@@ -28,7 +28,7 @@ export const Name = ({ name, desc, img, news }: DetailsBody) => {
         </p>
       </div>
       <News news={news} />
-      <Button title="VIEW MORE" />
+      <Button title="View More" />
     </Container>
   );
 };

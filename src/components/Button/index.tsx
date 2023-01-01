@@ -5,5 +5,11 @@ interface ButtonProps {
 }
 
 export const Button = ({ title }: ButtonProps) => {
-  return <Container>{title}</Container>;
+  return (
+    <Container>
+      <a href="#" className="button item1">
+        {title}
+      </a>
+    </Container>
+  );
 };

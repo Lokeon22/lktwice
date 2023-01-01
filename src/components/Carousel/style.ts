@@ -17,16 +17,24 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 
     span {
-      font-size: 18px;
+      font-size: 1.2rem;
       opacity: 0.9;
       cursor: pointer;
+
+      strong {
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
     }
 
     svg {
       cursor: pointer;
+      :hover {
+        color: rgba(113, 203, 250, 0.8);
+        transition: all ease 0.3s;
+      }
     }
   }
 

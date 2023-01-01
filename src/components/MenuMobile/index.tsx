@@ -12,15 +12,18 @@ import instagram from "../../assets/icons/instagram.svg";
 interface isVisibleProps {
   isVisible: boolean;
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  menuMobileScroll: boolean;
 }
 
-export const MenuMobile = ({ isVisible, setIsVisible }: isVisibleProps) => {
-  useEffect(() => {
-    document.body.style.overflowY = isVisible ? "hidden" : "auto";
-  }, [isVisible]);
-
+export const MenuMobile = ({
+  isVisible,
+  setIsVisible,
+  menuMobileScroll,
+}: isVisibleProps) => {
   return (
-    <MobileClose>
+    <MobileClose
+      style={{ backgroundColor: menuMobileScroll ? "black" : "transparent" }}
+    >
       <img src={logo} />
       <img src={menu} onClick={() => setIsVisible(true)} />
       <MobileOpen

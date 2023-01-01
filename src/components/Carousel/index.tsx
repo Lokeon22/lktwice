@@ -6,26 +6,22 @@ interface BodyComponent {
   slideNext: React.MouseEventHandler<HTMLDivElement>;
   slidePrev: React.MouseEventHandler<HTMLDivElement>;
   active: number;
-  isVisible: boolean;
 }
 
-export const Carousel = ({
-  slideNext,
-  slidePrev,
-  active,
-  isVisible,
-}: BodyComponent) => {
+export const Carousel = ({ slideNext, slidePrev, active }: BodyComponent) => {
   //active is the index from slide
   return (
-    <Container style={{ zIndex: isVisible ? "0" : "1" }}>
+    <Container>
       <div className="content">
         <div onClick={slidePrev}>
-          <span>0{active + 1}/06</span>
-          {<FiChevronLeft size={26} />}
+          {active > 0 ? <> {<FiChevronLeft size={18} />}</> : null}
+          <span>
+            <strong>0{active + 1}/</strong>06
+          </span>
         </div>
         <div onClick={slideNext}>
           <span>next</span>
-          {<FiChevronRight size={26} />}
+          {<FiChevronRight size={18} />}
         </div>
       </div>
     </Container>

@@ -12,19 +12,27 @@ import elips from "../../assets/icons/ellipsis.svg";
 interface isVisibleProps {
   isVisible: boolean;
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  menuMobileScroll: boolean;
 }
 
-export const Header = ({ isVisible, setIsVisible }: isVisibleProps) => {
+export const Header = ({
+  isVisible,
+  setIsVisible,
+  menuMobileScroll,
+}: isVisibleProps) => {
   const [active, setActive] = useState(false);
 
   return (
     <Container>
-      <nav>
+      <nav
+        style={{ backgroundColor: menuMobileScroll ? "black" : "transparent" }}
+      >
         <a href="#" style={{ color: "pink" }}>
           Home
         </a>
         <a href="#">Profile</a>
         <a href="#">News</a>
+        <a href="#">Shop</a>
         <img src={logo} />
         <a href="#">Discography</a>
         <a href="#">Special</a>
@@ -66,7 +74,11 @@ export const Header = ({ isVisible, setIsVisible }: isVisibleProps) => {
           </ul>
         </div>
       </nav>
-      <MenuMobile isVisible={isVisible} setIsVisible={setIsVisible} />
+      <MenuMobile
+        isVisible={isVisible}
+        setIsVisible={setIsVisible}
+        menuMobileScroll={menuMobileScroll}
+      />
     </Container>
   );
 };

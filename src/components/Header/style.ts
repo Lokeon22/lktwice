@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 1;
 
   nav {
@@ -11,7 +10,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 26px;
-    margin-top: 40px;
+    padding: 20px 0px;
+    transition: all ease 0.3s;
 
     img {
       width: 120px;
@@ -21,6 +21,7 @@ export const Container = styled.div`
       color: white;
       :hover {
         color: #ccc;
+        transition: all ease 0.3s;
       }
     }
 

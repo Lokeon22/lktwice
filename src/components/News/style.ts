@@ -43,6 +43,7 @@ export const NewsContent = styled.div`
     margin-bottom: 16px;
     :hover {
       color: #ccc;
+      transition: all ease 0.3s;
     }
   }
 `;

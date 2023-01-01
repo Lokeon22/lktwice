@@ -41,6 +41,10 @@ export const Container = styled.div`
       align-self: flex-start;
       cursor: pointer;
     }
+
+    a {
+      z-index: 0;
+    }
   }
 
   .teste {

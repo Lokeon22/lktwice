@@ -4,10 +4,11 @@ export const MobileClose = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
+  padding: 15px 10px;
+  transition: all ease 0.3s;
 
   > img {
-    max-width: 120px;
+    max-width: 90px;
   }
 
   @media screen and (min-width: 769px) {
@@ -18,7 +19,7 @@ export const MobileClose = styled.div`
 export const MobileOpen = styled.div`
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -36,8 +37,8 @@ export const MobileOpen = styled.div`
 
     > img {
       position: absolute;
-      top: 48px;
-      right: 30px;
+      top: 25px;
+      right: 20px;
     }
 
     a {

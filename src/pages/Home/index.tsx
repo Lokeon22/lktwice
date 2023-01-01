@@ -13,6 +13,7 @@ export const Home = () => {
   const [active, setActive] = useState<number>(0);
   const [position, setPostion] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [menuMobileScroll, setMenuMobileScroll] = useState(false);
   const contentRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -33,10 +34,27 @@ export const Home = () => {
     }
   };
 
+  useEffect(() => {
+    function menuScrollPosition() {
+      window.scrollY > 150
+        ? setMenuMobileScroll(true)
+        : setMenuMobileScroll(false);
+    }
+    window.addEventListener("scroll", menuScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", menuScrollPosition);
+    };
+  }, []);
+
   return (
     <>
       <Container>
-        <Header isVisible={isVisible} setIsVisible={setIsVisible} />
+        <Header
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          menuMobileScroll={menuMobileScroll}
+        />
         <section className="container">
           <div
             ref={contentRef}
@@ -54,7 +72,6 @@ export const Home = () => {
             slideNext={slideNext}
             slidePrev={slidePrev}
             active={active}
-            isVisible={isVisible}
           />
           <div
             className="content"
