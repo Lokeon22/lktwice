@@ -32,12 +32,55 @@ export const FanNewsLatests = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 50px;
+
+  h2 {
+    color: rgb(250, 167, 152);
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: black;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  span {
+    color: rgb(153, 155, 156);
+  }
+
+  a {
+    color: rgb(255, 95, 171);
+    :hover {
+      color: rgba(255, 95, 171, 0.7);
+    }
+  }
 `;
 
 export const FanNew = styled.div`
   display: flex;
   gap: 20px;
   padding: 0px 40px;
+  margin-bottom: 50px;
+
+  .subcontent {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      display: flex;
+      gap: 15px;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
 `;
 
 export const FanLatest = styled.div`
@@ -48,7 +91,6 @@ export const FanLatest = styled.div`
 
   h2 {
     font-size: 1.4rem;
-    text-transform: uppercase;
     margin-top: 10px;
   }
 
@@ -57,21 +99,22 @@ export const FanLatest = styled.div`
     flex-direction: column;
 
     img {
-      width: 100%;
-      border-radius: 5px;
+      width: 90%;
+      object-fit: contain;
+      border-radius: 6px;
     }
 
     div {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      gap: 15px;
       margin-top: 4px;
     }
 
     h1 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 400;
       text-transform: uppercase;
-      font-size: 1rem;
-      margin-top: 4px;
     }
   }
 `;

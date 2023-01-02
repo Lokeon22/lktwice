@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { slides } from "../../data";
+import { slides, wallpapersAbout } from "../../data";
 
 import { Header } from "../../components/Header";
 import { Carousel } from "../../components/Carousel";

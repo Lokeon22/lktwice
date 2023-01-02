@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Container } from "./style";
 import { Button } from "../Button";
 import wolftouss from "../../assets/icons/wolftouss.jfif";
+import cyberpunk from "../../assets/images/cyberpunk.png";
+
+interface bgProps {
+  bg: string;
+}
 
 export const Aboutft = () => {
   const [active, setActive] = useState(false);
