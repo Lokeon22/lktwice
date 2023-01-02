@@ -5,6 +5,7 @@ import { Header } from "../../components/Header";
 import { Carousel } from "../../components/Carousel";
 import { Name } from "../../components/Name";
 import { Aboutft } from "../../components/Aboutft";
+import { Latest } from "../../components/Latest";
 import { Footer } from "../../components/Footer";
 
 import { Container, Overlay } from "./style";
@@ -91,6 +92,7 @@ export const Home = () => {
           </div>
         </section>
         <Aboutft />
+        <Latest />
         <Footer />
       </Container>
     </>
