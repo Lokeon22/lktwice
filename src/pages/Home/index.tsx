@@ -120,8 +120,16 @@ export const Home = () => {
             className="content"
             style={{ transform: `translateX(${position}px)` }}
           >
-            {dataContent.map(({ id, fotos }) => {
-              return <Latest key={id} fotos={fotos?.fotoURL} />;
+            {dataContent.map(({ id, fotos, logoURL, notices }) => {
+              return (
+                <Latest
+                  key={id}
+                  fotos={fotos?.fotoURL}
+                  text={fotos?.text}
+                  logoURL={logoURL}
+                  notices={notices}
+                />
+              );
             })}
           </div>
         </section>

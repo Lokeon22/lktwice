@@ -1,3 +1,6 @@
+import witlogo from "../../assets/icons/witlogo.png";
+import cyberlogo from "../../assets/icons/samurailogo.png";
+
 import wolf1 from "../../assets/images/wolf1.jpg";
 import wolf2 from "../../assets/images/wolf2.jpg";
 import wolf3 from "../../assets/images/wolf3.jpg";
@@ -11,21 +14,32 @@ export const dataContent = [
     id: 1,
     title: "news",
     subtitle: "new!",
-    notices: "CELEBRATE TWICE ONCE DAY STAGE VERSION",
-    subdates: "2022.12.22",
+    notices: [
+      "CELEBRATE TWICE ONCE DAY STAGE VERSION",
+      "2023 LDF FAMILY PREMIER with TWICE",
+    ],
     fotos: {
       fotoURL: [wolf1, wolf2, wolf3],
+      text: [
+        "HAPPY NEW YEAR 2023",
+        "No witcher has ever died in his own bed",
+        "Wind's Howling - Geralt",
+      ],
     },
+    logoURL: witlogo,
   },
   {
     id: 2,
     title: "news",
     subtitle: "new!",
-    notices: "2023 LDF FAMILY PREMIER with TWICE",
-    subdates: "2023.01.01",
+    notices: [
+      "CELEBRATE TWICE ONCE DAY STAGE VERSION",
+      "2023 LDF FAMILY PREMIER with TWICE",
+    ],
     fotos: {
       fotoURL: [cyberpunk, ciri, geralt],
     },
+    logoURL: cyberlogo,
   },
 ];
 

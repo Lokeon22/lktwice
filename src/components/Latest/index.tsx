@@ -1,17 +1,18 @@
 import { Container, About, FanNewsLatests, FanNew, FanLatest } from "./style";
 import { Button } from "../Button";
 
-import witlogo from "../../assets/icons/witlogo.png";
-
 interface fotosProps {
   fotos?: string[];
+  logoURL: string;
+  notices: string[];
+  text?: string[];
 }
 
-export const Latest = ({ fotos }: fotosProps) => {
+export const Latest = ({ fotos, logoURL, notices, text }: fotosProps) => {
   return (
     <Container>
       <About>
-        <img src={witlogo} />
+        <img src={logoURL} />
         <Button title="About Once" />
       </About>
       <FanNewsLatests>
@@ -19,16 +20,20 @@ export const Latest = ({ fotos }: fotosProps) => {
           <h2>
             FanClub <br></br>News
           </h2>
-          <div className="subcontent">
-            <div>
-              <p>News</p>
-              <span>2022.12.28</span>
-              <a href="#" target="_blank">
-                New!
-              </a>
-            </div>
-            <h1>Celebrate Twice Once Day Stage Version</h1>
-          </div>
+          {notices.map((notice) => {
+            return (
+              <div key={notice} className="subcontent">
+                <div>
+                  <p>News</p>
+                  <span>2023.01.01</span>
+                  <a href="#" target="_blank">
+                    New!
+                  </a>
+                </div>
+                <h1>{notice}</h1>
+              </div>
+            );
+          })}
         </FanNew>
         <FanLatest>
           <h2>Latest</h2>
@@ -38,9 +43,8 @@ export const Latest = ({ fotos }: fotosProps) => {
                 <img src={foto} />
                 <div>
                   <p>photo</p>
-                  <span>2023.01.01</span>
+                  <h1>Happy New Year 2023</h1>
                 </div>
-                <h1>Happy new year 2023</h1>
               </div>
             );
           })}

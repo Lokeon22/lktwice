@@ -107,12 +107,12 @@ export const FanLatest = styled.div`
 
     div {
       display: flex;
-      gap: 15px;
-      margin-top: 4px;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     h1 {
-      margin-top: 10px;
       font-size: 1.2rem;
       font-weight: 400;
       text-transform: uppercase;
