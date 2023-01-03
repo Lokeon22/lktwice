@@ -12,15 +12,32 @@ import { Container, Overlay } from "./style";
 
 export const Home = () => {
   const [active, setActive] = useState<number>(0);
-  const [position, setPostion] = useState<number>(0);
+  const [position, setPosition] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [menuMobileScroll, setMenuMobileScroll] = useState(false);
   const contentRef = useRef<HTMLInputElement | null>(null);
+  const [widthresize, setWidthresize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidthresize(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    if (!contentRef.current) return;
+    const { width } = contentRef.current.getBoundingClientRect();
+    if (width !== widthresize) {
+      setPosition(active * 0);
+      setActive(active - active);
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [widthresize]);
 
   useEffect(() => {
     if (!contentRef.current) return;
     const { width } = contentRef.current.getBoundingClientRect();
-    setPostion(-(width * active));
+    setPosition(-(width * active));
   }, [active]);
 
   const slidePrev = () => {
