@@ -1,19 +1,17 @@
 import { useState } from "react";
 import { Container } from "./style";
 import { Button } from "../Button";
-import wolftouss from "../../assets/icons/wolftouss.jfif";
-import cyberpunk from "../../assets/images/cyberpunk.png";
 
 interface bgProps {
   bg: string;
 }
 
-export const Aboutft = () => {
+export const Aboutft = ({ bg }: bgProps) => {
   const [active, setActive] = useState(false);
 
   return (
     <Container>
-      <img src={wolftouss} />
+      <img src={bg} />
       <div>
         <h2>About Twice</h2>
         <p>

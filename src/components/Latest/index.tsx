@@ -1,11 +1,13 @@
-import { dataFotos } from "../../data/FanNewsLatestDT";
 import { Container, About, FanNewsLatests, FanNew, FanLatest } from "./style";
 import { Button } from "../Button";
 
 import witlogo from "../../assets/icons/witlogo.png";
-import wolf from "../../assets/images/wolf1.jpg";
 
-export const Latest = () => {
+interface fotosProps {
+  fotos?: string[];
+}
+
+export const Latest = ({ fotos }: fotosProps) => {
   return (
     <Container>
       <About>
@@ -30,14 +32,18 @@ export const Latest = () => {
         </FanNew>
         <FanLatest>
           <h2>Latest</h2>
-          <div className="content">
-            <img src={wolf} />
-            <div>
-              <p>photo</p>
-              <span>2023.01.01</span>
-            </div>
-            <h1>Happy new year 2023</h1>
-          </div>
+          {fotos?.map((foto, index) => {
+            return (
+              <div key={index} className="content">
+                <img src={foto} />
+                <div>
+                  <p>photo</p>
+                  <span>2023.01.01</span>
+                </div>
+                <h1>Happy new year 2023</h1>
+              </div>
+            );
+          })}
         </FanLatest>
       </FanNewsLatests>
     </Container>

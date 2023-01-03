@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  height: 100%;
+  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 4fr;
+  flex-shrink: 0;
 
   @media screen and (max-width: 1100px) {
     grid-template-columns: 200px 4fr;

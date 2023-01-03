@@ -33,7 +33,7 @@ export const slides = [
   { id: 6, bg: morningyu, name: "EXEM6", desc: "TESTE 6" },
 ];
 
-export const wallpapersAbout = [
+export const dataFotosAbout = [
   { id: 1, bg: witchertoussaint },
   { id: 2, bg: cyberpunk },
   { id: 3, bg: witchertoussaint },

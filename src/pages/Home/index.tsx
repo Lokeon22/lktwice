@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { slides, wallpapersAbout } from "../../data";
+import { slides, dataFotosAbout } from "../../data";
+import { dataContent } from "../../data/FanNewsLatestDT";
 
 import { Header } from "../../components/Header";
 import { Carousel } from "../../components/Carousel";
@@ -15,8 +16,8 @@ export const Home = () => {
   const [position, setPosition] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [menuMobileScroll, setMenuMobileScroll] = useState(false);
-  const contentRef = useRef<HTMLInputElement | null>(null);
   const [widthresize, setWidthresize] = useState(window.innerWidth);
+  const contentRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => setWidthresize(window.innerWidth);
@@ -107,9 +108,23 @@ export const Home = () => {
               );
             })}
           </div>
+          <div
+            className="content"
+            style={{ transform: `translateX(${position}px)` }}
+          >
+            {dataFotosAbout.map(({ id, bg }) => {
+              return <Aboutft key={id} bg={bg} />;
+            })}
+          </div>
+          <div
+            className="content"
+            style={{ transform: `translateX(${position}px)` }}
+          >
+            {dataContent.map(({ id, fotos }) => {
+              return <Latest key={id} fotos={fotos?.fotoURL} />;
+            })}
+          </div>
         </section>
-        <Aboutft />
-        <Latest />
         <Footer />
       </Container>
     </>
