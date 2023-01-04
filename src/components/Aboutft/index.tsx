@@ -55,7 +55,6 @@ export const Aboutft = ({ bg }: bgProps) => {
         </span>
         <Button title="Member Profile" />
       </div>
-      <div className="teste"></div>
     </Container>
   );
 };

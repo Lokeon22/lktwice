@@ -10,6 +10,11 @@ export const Container = styled.section`
   @media screen and (max-width: 1100px) {
     grid-template-columns: 200px 4fr;
   }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
 `;
 
 export const About = styled.div`
@@ -25,6 +30,23 @@ export const About = styled.div`
 
   @media screen and (max-width: 1100px) {
     padding: 0px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 359px) {
+    padding: 5px;
+    img {
+      width: 100px;
+    }
   }
 `;
 
@@ -58,6 +80,11 @@ export const FanNewsLatests = styled.div`
       color: rgba(255, 95, 171, 0.7);
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px;
+    gap: 10px;
+  }
 `;
 
 export const FanNew = styled.div`
@@ -82,6 +109,26 @@ export const FanNew = styled.div`
       text-transform: uppercase;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    padding: 0px 10px;
+    margin-bottom: 25px;
+    gap: 15px;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .subcontent {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+  }
 `;
 
 export const FanLatest = styled.div`
@@ -95,27 +142,85 @@ export const FanLatest = styled.div`
     margin-top: 10px;
   }
 
-  .content {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .contentimg {
     display: flex;
-    flex-direction: column;
+    align-items: center;
 
     img {
       width: 90%;
       object-fit: contain;
       border-radius: 6px;
     }
+  }
 
-    div {
+  .contenttext {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 5px;
+
+    > div {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-top: 10px;
     }
 
     h1 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 400;
       text-transform: uppercase;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 0px 10px;
+    margin-bottom: 25px;
+    gap: 15px;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .contentimg {
+      justify-content: center;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .contenttext {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .contentimg {
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .contenttext {
+      flex-direction: row;
+      display: none;
     }
   }
 `;

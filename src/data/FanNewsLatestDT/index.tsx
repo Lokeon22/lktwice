@@ -22,7 +22,7 @@ export const dataContent = [
       fotoURL: [wolf1, wolf2, wolf3],
       text: [
         "HAPPY NEW YEAR 2023",
-        "No witcher has ever died in his own bed",
+        "This Is My Story Not Yours",
         "Wind's Howling - Geralt",
       ],
     },
@@ -37,7 +37,7 @@ export const dataContent = [
       "2023 LDF FAMILY PREMIER with TWICE",
     ],
     fotos: {
-      fotoURL: [cyberpunk, ciri, geralt],
+      fotoURL: [],
     },
     logoURL: cyberlogo,
   },

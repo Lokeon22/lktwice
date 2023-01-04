@@ -159,4 +159,11 @@ export const Foot = styled.footer`
     font-size: 0.7rem;
     color: red;
   }
+
+  @media screen and (max-width: 359px) {
+    span {
+      text-align: center;
+      padding: 0px 5px;
+    }
+  }
 `;

@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-shrink: 0;
   margin-top: 80px;
   grid-template-columns: 1.5fr 1fr;
+  margin-bottom: 50px;
 
   img {
     position: relative;
@@ -39,6 +40,7 @@ export const Container = styled.div`
 
     span {
       font-size: 14px;
+      font-weight: 600;
       align-self: flex-start;
       cursor: pointer;
     }
@@ -55,6 +57,7 @@ export const Container = styled.div`
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
     padding: 0;
+    margin-bottom: 0px;
 
     img {
       position: initial;
@@ -62,10 +65,15 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 769px) {
-    margin-top: 10px;
+    margin-top: 0px;
 
     div {
-      padding: 0 20px;
+      padding: 0 25px;
+
+      h2 {
+        font-size: 24px;
+        margin: 25px 0px;
+      }
     }
   }
 `;

@@ -46,4 +46,8 @@ export const NewsContent = styled.div`
       transition: all ease 0.3s;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    padding: 0px 10px;
+  }
 `;

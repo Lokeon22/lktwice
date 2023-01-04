@@ -26,9 +26,6 @@ export const Latest = ({ fotos, logoURL, notices, text }: fotosProps) => {
                 <div>
                   <p>News</p>
                   <span>2023.01.01</span>
-                  <a href="#" target="_blank">
-                    New!
-                  </a>
                 </div>
                 <h1>{notice}</h1>
               </div>
@@ -37,17 +34,28 @@ export const Latest = ({ fotos, logoURL, notices, text }: fotosProps) => {
         </FanNew>
         <FanLatest>
           <h2>Latest</h2>
-          {fotos?.map((foto, index) => {
-            return (
-              <div key={index} className="content">
-                <img src={foto} />
-                <div>
-                  <p>photo</p>
-                  <h1>Happy New Year 2023</h1>
+          <div className="container">
+            {fotos?.map((foto, index) => {
+              return (
+                <div key={index} className="contentimg">
+                  <img src={foto} />
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+            {text?.map((texto, index) => {
+              return (
+                <div key={index} className="contenttext">
+                  <div>
+                    <p>photo</p>
+                    <a href="#" target="_blank">
+                      New!
+                    </a>
+                  </div>
+                  <h1>{texto}</h1>
+                </div>
+              );
+            })}
+          </div>
         </FanLatest>
       </FanNewsLatests>
     </Container>
