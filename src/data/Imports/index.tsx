@@ -1,4 +1,5 @@
 // import videos because stream on mobile not autoplay
+import wolfmedalion from "../../assets/videos/wolfmedalion.mp4";
 import intoyu from "../../assets/videos/intoyu.mp4";
 import morningyu from "../../assets/videos/morningyu.mp4";
 import witcherwolf from "../../assets/icons/witcherwolf.jpg";
@@ -22,6 +23,7 @@ import girl2cyber from "../../assets/images/girl2cyber.png";
 import girl3cyber from "../../assets/images/girl3cyber.png";
 
 export {
+  wolfmedalion,
   intoyu,
   morningyu,
   witcherwolf,

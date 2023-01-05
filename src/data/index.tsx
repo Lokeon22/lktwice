@@ -1,4 +1,5 @@
 import {
+  wolfmedalion,
   intoyu,
   morningyu,
   witcherwolf,
@@ -9,7 +10,7 @@ import {
 export const slides = [
   {
     id: 1,
-    bg: intoyu,
+    bg: wolfmedalion,
     name: "LKNZ",
     desc: "GET LK",
     img: witcherwolf,
@@ -28,7 +29,7 @@ export const slides = [
     desc: "TESTE 22",
   },
   { id: 3, bg: intoyu, name: "EXEM3", desc: "TESTE 33" },
-  { id: 4, bg: morningyu, name: "EXEM4", desc: "POST 44" },
+  { id: 4, bg: wolfmedalion, name: "EXEM4", desc: "POST 44" },
   { id: 5, bg: intoyu, name: "EXEM5", desc: "DELET 5" },
   { id: 6, bg: morningyu, name: "EXEM6", desc: "TESTE 6" },
 ];

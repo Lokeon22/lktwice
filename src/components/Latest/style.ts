@@ -150,6 +150,14 @@ export const ContentImg = styled.div`
     width: 90%;
     object-fit: contain;
     border-radius: 6px;
+    :hover {
+      rotate: 4deg;
+      scale: calc(1.03);
+      transition: all ease 0.3s;
+      -webkit-box-shadow: 4px 5px 15px 0px rgba(161, 21, 21, 1);
+      -moz-box-shadow: 4px 5px 15px 0px rgba(161, 21, 21, 1);
+      box-shadow: 4px 5px 15px 0px rgba(161, 21, 21, 1);
+    }
   }
 
   @media screen and (max-width: 1000px) {
