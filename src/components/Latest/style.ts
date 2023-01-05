@@ -56,11 +56,6 @@ export const FanNewsLatests = styled.div`
   justify-content: center;
   gap: 50px;
 
-  h2 {
-    color: rgb(250, 167, 152);
-    text-transform: uppercase;
-  }
-
   p {
     font-size: 0.7rem;
     text-transform: uppercase;
@@ -87,28 +82,17 @@ export const FanNewsLatests = styled.div`
   }
 `;
 
+export const Title = styled.h2`
+  color: rgb(250, 167, 152);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+`;
+
 export const FanNew = styled.div`
   display: flex;
   gap: 20px;
   padding: 0px 40px;
   margin-bottom: 50px;
-
-  .subcontent {
-    display: flex;
-    flex-direction: column;
-
-    > div {
-      display: flex;
-      gap: 15px;
-    }
-
-    h1 {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-  }
 
   @media screen and (max-width: 1000px) {
     padding: 0px 10px;
@@ -117,12 +101,6 @@ export const FanNew = styled.div`
 
     h2 {
       font-size: 1.2rem;
-    }
-
-    .subcontent {
-      h1 {
-        font-size: 1rem;
-      }
     }
   }
 
@@ -131,96 +109,93 @@ export const FanNew = styled.div`
   }
 `;
 
-export const FanLatest = styled.div`
+export const SubComponent = styled.div`
   display: flex;
-  justify-content: start;
-  gap: 20px;
-  padding: 0px 40px;
+  flex-direction: column;
 
-  h2 {
-    font-size: 1.4rem;
+  > div {
+    display: flex;
+    gap: 15px;
+  }
+
+  h1 {
     margin-top: 10px;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .contentimg {
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 90%;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-  }
-
-  .contenttext {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-    gap: 5px;
-
-    > div {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    h1 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 
   @media screen and (max-width: 1000px) {
-    padding: 0px 10px;
-    margin-bottom: 25px;
-    gap: 15px;
-
-    h2 {
-      font-size: 1.2rem;
+    h1 {
+      font-size: 1rem;
     }
+  }
+`;
 
-    .contentimg {
-      justify-content: center;
+export const ContainerFotoText = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
-      img {
-        width: 80%;
-      }
-    }
+  @media screen and (max-width: 769px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+`;
 
-    .contenttext {
-      h1 {
-        font-size: 1rem;
-      }
+export const ContentImg = styled.div`
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 90%;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+
+    img {
+      width: 80%;
     }
   }
 
   @media screen and (max-width: 769px) {
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .container {
-      grid-template-columns: 1fr;
-      gap: 10px;
+    img {
+      width: 70%;
     }
+  }
+`;
 
-    .contentimg {
-      justify-content: center;
-      align-items: center;
+export const ContentText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  gap: 5px;
 
-      img {
-        width: 70%;
-      }
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 1000px) {
+    h1 {
+      font-size: 1rem;
     }
+  }
 
-    .contenttext {
-      flex-direction: row;
-      display: none;
-    }
+  @media screen and (max-width: 769px) {
+    flex-direction: row;
+    display: none;
   }
 `;

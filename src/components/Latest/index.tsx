@@ -1,4 +1,14 @@
-import { Container, About, FanNewsLatests, FanNew, FanLatest } from "./style";
+import {
+  Container,
+  About,
+  FanNewsLatests,
+  FanNew,
+  Title,
+  SubComponent,
+  ContainerFotoText,
+  ContentImg,
+  ContentText,
+} from "./style";
 import { Button } from "../Button";
 
 interface fotosProps {
@@ -17,34 +27,34 @@ export const Latest = ({ fotos, logoURL, notices, text }: fotosProps) => {
       </About>
       <FanNewsLatests>
         <FanNew>
-          <h2>
+          <Title>
             FanClub <br></br>News
-          </h2>
+          </Title>
           {notices.map((notice) => {
             return (
-              <div key={notice} className="subcontent">
+              <SubComponent key={notice}>
                 <div>
                   <p>News</p>
                   <span>2023.01.01</span>
                 </div>
                 <h1>{notice}</h1>
-              </div>
+              </SubComponent>
             );
           })}
         </FanNew>
-        <FanLatest>
-          <h2>Latest</h2>
-          <div className="container">
+        <FanNew>
+          <Title>Latest</Title>
+          <ContainerFotoText>
             {fotos?.map((foto, index) => {
               return (
-                <div key={index} className="contentimg">
+                <ContentImg key={index}>
                   <img src={foto} />
-                </div>
+                </ContentImg>
               );
             })}
             {text?.map((texto, index) => {
               return (
-                <div key={index} className="contenttext">
+                <ContentText key={index}>
                   <div>
                     <p>photo</p>
                     <a href="#" target="_blank">
@@ -52,11 +62,11 @@ export const Latest = ({ fotos, logoURL, notices, text }: fotosProps) => {
                     </a>
                   </div>
                   <h1>{texto}</h1>
-                </div>
+                </ContentText>
               );
             })}
-          </div>
-        </FanLatest>
+          </ContainerFotoText>
+        </FanNew>
       </FanNewsLatests>
     </Container>
   );

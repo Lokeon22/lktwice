@@ -1,10 +1,10 @@
-import intoyu from "../assets/videos/intoyu.mp4";
-import morningyu from "../assets/videos/morningyu.mp4";
-import witcherwolf from "../assets/icons/witcherwolf.jpg";
-// import videos because stream on mobile not autoplay
-
-import witchertoussaint from "../assets/icons/wolftouss.jfif";
-import cyberpunk from "../assets/images/cyberpunk.png";
+import {
+  intoyu,
+  morningyu,
+  witcherwolf,
+  witchertoussaint,
+  cyberpunkmoto,
+} from "./Imports";
 
 export const slides = [
   {
@@ -35,9 +35,9 @@ export const slides = [
 
 export const dataFotosAbout = [
   { id: 1, bg: witchertoussaint },
-  { id: 2, bg: cyberpunk },
+  { id: 2, bg: cyberpunkmoto },
   { id: 3, bg: witchertoussaint },
-  { id: 4, bg: cyberpunk },
+  { id: 4, bg: cyberpunkmoto },
   { id: 5, bg: witchertoussaint },
-  { id: 6, bg: cyberpunk },
+  { id: 6, bg: cyberpunkmoto },
 ];
