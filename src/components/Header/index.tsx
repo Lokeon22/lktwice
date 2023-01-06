@@ -1,36 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Container } from "./style";
 
 import { MenuMobile } from "../MenuMobile";
+import { logo, youtube, facebook, instagram, elips } from "../../data/Imports";
 
-import logo from "../../assets/icons/witcherlogo.png";
-import youtube from "../../assets/icons/youtube.svg";
-import facebook from "../../assets/icons/facebook.svg";
-import instagram from "../../assets/icons/instagram.svg";
-import elips from "../../assets/icons/ellipsis.svg";
-
-interface isVisibleProps {
-  isVisible: boolean;
-  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  menuMobileScroll: boolean;
-}
-
-export const Header = ({
-  isVisible,
-  setIsVisible,
-  menuMobileScroll,
-}: isVisibleProps) => {
+export const Header = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [menuMobileScroll, setMenuMobileScroll] = useState(false);
   const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    function menuScrollPosition() {
+      window.scrollY > 150
+        ? setMenuMobileScroll(true)
+        : setMenuMobileScroll(false);
+    }
+    window.addEventListener("scroll", menuScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", menuScrollPosition);
+    };
+  }, []);
 
   return (
     <Container>
       <nav
         style={{ backgroundColor: menuMobileScroll ? "black" : "transparent" }}
       >
-        <a href="#" style={{ color: "pink" }}>
+        <Link to="/" style={{ color: "pink" }}>
           Home
-        </a>
-        <a href="#">Profile</a>
+        </Link>
+        <Link to={"/profile"}>Profile</Link>
         <a href="#">News</a>
         <a href="#">Shop</a>
         <img src={logo} />

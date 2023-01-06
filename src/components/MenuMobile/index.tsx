@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { MobileClose, MobileOpen, SocialMobile } from "./style";
 
 import logo from "../../assets/icons/witcherlogo.png";
@@ -33,8 +33,8 @@ export const MenuMobile = ({
       >
         <ul>
           <img src={close} onClick={() => setIsVisible(false)} />
-          <a href="#">Home</a>
-          <a href="#">Profile</a>
+          <Link to={"/"}>Home</Link>
+          <Link to={"/profile"}>Profile</Link>
           <a href="#">News</a>
           <a href="#">Discography</a>
           <a href="#">Special</a>

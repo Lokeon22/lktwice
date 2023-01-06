@@ -14,8 +14,6 @@ import { Container, Overlay } from "./style";
 export const Home = () => {
   const [active, setActive] = useState<number>(0);
   const [position, setPosition] = useState<number>(0);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [menuMobileScroll, setMenuMobileScroll] = useState(false);
   const [widthresize, setWidthresize] = useState(window.innerWidth);
   const contentRef = useRef<HTMLInputElement | null>(null);
 
@@ -53,27 +51,10 @@ export const Home = () => {
     }
   };
 
-  useEffect(() => {
-    function menuScrollPosition() {
-      window.scrollY > 150
-        ? setMenuMobileScroll(true)
-        : setMenuMobileScroll(false);
-    }
-    window.addEventListener("scroll", menuScrollPosition);
-
-    return () => {
-      window.removeEventListener("scroll", menuScrollPosition);
-    };
-  }, []);
-
   return (
     <>
       <Container>
-        <Header
-          isVisible={isVisible}
-          setIsVisible={setIsVisible}
-          menuMobileScroll={menuMobileScroll}
-        />
+        <Header />
         <section className="container">
           <div
             ref={contentRef}

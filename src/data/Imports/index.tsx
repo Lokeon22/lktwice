@@ -22,6 +22,13 @@ import girlcyber from "../../assets/images/girlcyber.png";
 import girl2cyber from "../../assets/images/girl2cyber.png";
 import girl3cyber from "../../assets/images/girl3cyber.png";
 
+//icons to Header & MenuMobile
+import logo from "../../assets/icons/witcherlogo.png";
+import youtube from "../../assets/icons/youtube.svg";
+import facebook from "../../assets/icons/facebook.svg";
+import instagram from "../../assets/icons/instagram.svg";
+import elips from "../../assets/icons/ellipsis.svg";
+
 export {
   wolfmedalion,
   intoyu,
@@ -37,4 +44,9 @@ export {
   girlcyber,
   girl2cyber,
   girl3cyber,
+  logo,
+  youtube,
+  facebook,
+  instagram,
+  elips,
 };
