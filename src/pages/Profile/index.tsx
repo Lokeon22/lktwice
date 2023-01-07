@@ -1,23 +1,18 @@
-import { Container, Content, SubContent } from "./style";
+import { Container, Content } from "./style";
 
 import { Header } from "../../components/Header";
+import { ProfileFt } from "../../components/ProfileFt";
+import { profiles } from "../../data/Profiles";
 
 export const Profile = () => {
   return (
     <Container>
       <Header />
       <Content>
-        <h2>Profile</h2>
-        <SubContent>
-          <ul>
-            <li>TESTE</li>
-            <li>TESTE</li>
-            <li>TESTE</li>
-            <li>TESTE</li>
-            <li>TESTE</li>
-            <li>TESTE</li>
-          </ul>
-        </SubContent>
+        {profiles &&
+          profiles.map(({ id, title, foto }) => {
+            return <ProfileFt key={id} id={id} title={title} foto={foto} />;
+          })}
       </Content>
     </Container>
   );

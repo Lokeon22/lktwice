@@ -29,6 +29,11 @@ import facebook from "../../assets/icons/facebook.svg";
 import instagram from "../../assets/icons/instagram.svg";
 import elips from "../../assets/icons/ellipsis.svg";
 
+//images page profiles
+import geraltcyber from "../../assets/images/geraltcyberprofile.jpg";
+import geraltfireprofile from "../../assets/images/geraltfireprofile.jpg";
+import ciriprofile from "../../assets/images/ciriprofile.jpg";
+
 export {
   wolfmedalion,
   intoyu,
@@ -49,4 +54,7 @@ export {
   facebook,
   instagram,
   elips,
+  geraltcyber,
+  geraltfireprofile,
+  ciriprofile,
 };
